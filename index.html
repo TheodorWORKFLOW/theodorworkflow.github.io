@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Na0mi's Garden</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Na0mi's Garden</h1>
+        <div class="profile">
+            <img src="https://i.pinimg.com/originals/23/83/a2/2383a2ca06088993c0e00a82700259e7.gif" alt="Profile Picture">
+        </div>
+        <div class="social-media">
+            <a href="https://discord.gg/rNcz9ua7" target="_blank">
+                <img src="https://www.pngall.com/wp-content/uploads/13/Discord-Logo-PNG-Images.png" alt="Discord Logo">
+            </a>
+        </div>
+        <button class="open-about-me" onclick="openAboutMe()">
+            <img src="https://www.freeiconspng.com/thumbs/information-icon/info-icon--6.png" alt="About Me Icon">
+            <span>About Na0mi's Life</span>
+        </button>
+    </div>
+
+    <!-- Spotify Miniplayer -->
+    <div id="spotify-player">
+        <iframe src="https://open.spotify.com/embed/playlist/1jhIn68SS1GtBme408NWa3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+    <!-- Visitor Counter -->
+    <div class="visitor-counter" id="visitor-counter">0</div>
+
+    <!-- Time Bubble -->
+    <div class="time-bubble" id="time-bubble">
+        <div class="time-info">
+            <div class="time-hour" id="time-hour">00:00</div>
+            <div class="time-zone">GMT+3</div>
+        </div>
+    </div>
+
+    <!-- About Me Window -->
+    <div class="about-me-window" id="about-me-window">
+        <div class="title-bar" id="drag-area">
+            <div class="title">About Me</div>
+            <div class="buttons">
+                <button class="close-button" onclick="closeAboutMe()">✕</button>
+            </div>
+        </div>
+        <div class="content">
+            <p>My name is Theodor, I'm an 18-year-old Romanian living in Belgium. I struggle with depression and have few friends. I love gaming, tech, i love studying and also reading books ! <3 I'm also searching for a boyfriend .</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
