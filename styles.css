@@ -1,177 +1,79 @@
-/* General styling */
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url('https://w.wallha.com/ws/13/gMSobV0k.png'); /* Add your background image URL here */
-    background-size: cover;
-    background-position: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 50px auto;
-    padding: 20px;
-    position: relative;
-}
-
-/* Profile styling */
-.profile {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #160404; /* White border */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Shadow effect */
-    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
-}
-
-.profile img:hover {
-    transform: scale(1.1); /* Enlarge on hover */
-}
-
-.profile h1 {
-    font-size: 36px;
-    color: #ffffff;
-    margin-top: 20px;
-    text-shadow: 2px 2px 4px rgba(247, 0, 255, 0.5); /* Font shadow */
-}
-
-.social-media {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-media a {
-    margin: 0 10px;
-}
-
-.social-media a img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Icon shadow */
-}
-
-/* Window styling */
-.window {
-    background-color: rgba(0, 0, 0, 0.4); /* Dark transparent background */
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
-}
-
-.window-content {
-    padding: 20px;
-}
-
-/* Friends styling */
-.friends {
     text-align: center;
 }
 
-.friends h2 {
-    font-size: 28px;
-    color: #b5b823;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Font shadow */
+h1, h2, p {
+    margin: 0.5em 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.friend {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    transition: transform 0.3s ease;
+#title {
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
 }
 
-.friend:last-child {
-    border-bottom: none;
+#author {
+    font-size: 2em;
+    font-weight: bold;
 }
 
-.friend:hover {
-    transform: translateY(-5px);
+#story {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.friend img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%; 
-    margin-right: 15px;
+.language {
+    font-weight: bold;
+    display: block;
+    margin-top: 1em;
 }
 
-.friend-info {
-    flex-grow: 1;
-    display: flex; /* Add flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+.flame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: transparent;
+    animation: flicker 3s ease-in-out infinite;
+    mix-blend-mode: screen;
 }
 
-
-.friend h3 {
-    margin: 0;
-    font-size: 20px;
-    color: #ffffff;
-    text-shadow: 2px 2px 4px rgba(65, 58, 64, 0.5); /* Font shadow */
-}
-
-.friend-social-media {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 10px;
-}
-
-.friend-social-media a {
-    margin-left: 10px;
-}
-
-.friend-social-media a img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Icon shadow */
-}
-
-.friend-social-media a:hover img {
-    transform: scale(1.2);
-}
-
-/* Background animation */
-@keyframes snowflake-fall {
-    0% {
-        transform: translateY(-100%);
+@keyframes flicker {
+    0%, 100% {
+        background: radial-gradient(circle, rgba(255, 165, 0, 0.3), rgba(255, 0, 0, 0.6));
+        transform: scale(1);
+        opacity: 0.8;
     }
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
-/* Pet animation */
-@keyframes pet-move {
-    0% {
-        transform: translate(0, 0);
+    25% {
+        background: radial-gradient(circle, rgba(255, 165, 0, 0.5), rgba(255, 0, 0, 0.7));
+        transform: scale(1.1);
+        opacity: 0.9;
     }
     50% {
-        transform: translate(-10px, -10px);
+        background: radial-gradient(circle, rgba(255, 165, 0, 0.7), rgba(255, 0, 0, 0.8));
+        transform: scale(1.2);
+        opacity: 1;
     }
-    100% {
-        transform: translate(0, 0);
+    75% {
+        background: radial-gradient(circle, rgba(255, 165, 0, 0.5), rgba(255, 0, 0, 0.7));
+        transform: scale(1.1);
+        opacity: 0.9;
     }
-}
-
-/* Apply animations */
-.snowflake {
-    animation: snowflake-fall 5s linear infinite;
-}
-
-.pet {
-    position: absolute;
-    pointer-events: none; /* Make sure the pet doesn't interfere with clicking */
-    z-index: 1; /* Ensure the pet stays on top */
-    animation: pet-move 1.4s ease-in-out infinite alternate;
 }
