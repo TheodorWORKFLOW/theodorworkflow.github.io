@@ -26,23 +26,3 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
-
-(function() {
-    var isOpen = false;
-    
-    var checkDevTools = function() {
-        // Measure window dimensions with and without devtools open
-        var devToolsWidth = window.outerWidth - window.innerWidth > 160;
-        var devToolsHeight = window.outerHeight - window.innerHeight > 60;
-
-        // If either width or height deviates from normal browser window, assume devtools open
-        if (devToolsWidth || devToolsHeight) {
-            isOpen = true;
-            // Close the window if devtools are detected
-            window.close();
-        }
-    };
-
-    // Check for devtools every second
-    setInterval(checkDevTools, 1000);
-})();
