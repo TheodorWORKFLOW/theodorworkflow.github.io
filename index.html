@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rika site <3</title>
+    <title>Discord Profile Clone</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background-video">
-        <video autoplay muted loop>
-            <source src="video/video.mp4" type="video/mp4">
-        </video>
-    </div>
-    <audio id="background-music" autoplay loop>
-        <source src="sounds/music.mp3" type="audio/mpeg">
-    </audio>
-    <div class="content">
-        <div class="info-box">
-            <img src="img/profile.jpg" alt="Profile Picture" class="profile-pic">
-            <h1 class="name">Rika</h1>
-            <div class="social-media">
-                <a href="https://open.spotify.com/playlist/6bUF7Mp7WoiIv6UMSn3eXs?si=fe2fef628e914dbc" target="_blank" class="social-link"><img src="icons/spotify.png" alt="spotify"></a>
-                <a href="https://www.reddit.com/user/IndependenceQuiet168/" target="_blank" class="social-link"><img src="icons/reddit.png" alt="reddit"></a>
-                <a href="https://discord.gg/oldfortnite" target="_blank" class="social-link"><img src="icons/discord.png" alt="discord"></a>
+    <div class="container">
+        <div class="banner">
+            <div class="banner-animation"></div>
+        </div>
+        <div class="profile">
+            <img src="https://i.pinimg.com/originals/cc/c4/06/ccc406dbafc09f3ac2f066a494af21e7.jpg" alt="Profile Picture" class="profile-picture">
+            <div class="profile-details">
+                <h1>テオドール</h1>
+                <p class="tag">1sk8</p>
+                <p class="description">フォートナイト好き。コーディングを学ぶ。音楽を愛する。
+                </p>
             </div>
         </div>
+        <div class="social-media">
+            <a href="https://Discord.com" target="_blank" class="social-icon"><i class="fab fa-discord"></i></a>
+            <a href="https://reddit.com" target="_blank" class="social-icon"><i class="fab fa-reddit"></i></a>
+            <a href="https://spotify.com" target="_blank" class="social-icon"><i class="fab fa-spotify"></i></a>
+        </div>
     </div>
-    <div class="cursor"></div>
     <script src="script.js"></script>
 </body>
 </html>
