@@ -65,6 +65,10 @@ body {
   background-color: white;
 }
 
+#discord-status {
+    margin-top: 20px;
+}
+
 .profile-details {
   color: rgb(255, 255, 255);
   margin-top: 10px;
